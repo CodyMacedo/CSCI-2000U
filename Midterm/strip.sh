@@ -3,4 +3,4 @@
 # Name: Cody Macedo
 # ID: 100486136
 
-head -n -$2 $3 | tail -n $1 $3 | cat
+head -n -$2 $3 | tail -n $1 | cat
