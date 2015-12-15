@@ -4,7 +4,7 @@
 # except the two header lines?
 # Enter the relevant Unix command(s) used below.
 
-
+	tail -n +3 classlist.csv
 
 
 # part (b)
@@ -13,7 +13,9 @@
 # Enter the relevant Unix command(s) used below as well as the number
 # of students in the list.
 
-
+	tail -n +3 classlist.csv | wc -l
+	
+	130
 
 
 # part (c)
@@ -24,7 +26,11 @@
 # Enter the relevant Unix command(s) used below as well as the names
 # of the first and last students in the new list.
 
+	tail -n +3 classlist.csv | sort --field-separator=',' --key=2
 
+	Adam Holte
+
+	Zenia Mowrer
 
 
 # part (d)
@@ -34,10 +40,14 @@
 # Enter the relevant name(s) and the Unix command(s) below.
 
 
+	tail -n +3 classlist.csv | cut -- delimiter=',' --fields=2 | sort | uniq -d
 
+	1 repeated name and it is Diego
 
 # part (f) [BONUS]
 # Construct a Unix pipeline that extracts the last three digits of
 # the student number and the first character of the first name to make
 # a four-character identifier for each student.
 # Enter the relevant Unix command(s) used below.
+
+	
